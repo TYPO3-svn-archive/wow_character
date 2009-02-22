@@ -1,0 +1,58 @@
+### create background image with avatar ###
+tmp.wow_character.background = IMG_RESOURCE
+tmp.wow_character.background {
+  file = GIFBUILDER
+  file {
+    XY = 352,440
+    format = png
+    backColor = #ffffbf
+    10 = IMAGE
+    10.file = GIFBUILDER
+    10.file {
+      XY = 352,440
+      format = png
+      backColor = #ffffbf
+      10 = IMAGE
+      10.offset = 10,8
+      10.file.import.data = register:tx_wowcharacter_pi1_avatar
+      15 = IMAGE
+      15.file = EXT:wow_character/pi1/background.png
+      15.mask = EXT:wow_character/pi1/background-mask1.png
+    }
+    10.mask = EXT:wow_character/pi1/background-mask2.png
+  }
+}
+
+### configure plugin ###
+plugin.tx_wowcharacter_pi1 {
+  template {
+    css = TEMPLATE
+    css {
+      template = FILE
+      template.file = {$plugin.tx_wowcharacter_pi1.template.css}
+      marks {
+        BACKGROUND < tmp.wow_character.background
+      }
+    }
+    html = TEMPLATE
+    html {
+      template = FILE
+      template.file = {$plugin.tx_wowcharacter_pi1.template.html}
+    }
+  }
+  itemDisplayPID = {$plugin.tx_wowcharacter_pi1.itemDisplayPID}
+}
+plugin.tx_wowcharacter_pi2 {
+  template {
+    css = TEMPLATE
+    css {
+      template = FILE
+      template.file = {$plugin.tx_wowcharacter_pi2.template.css}
+    }
+    html = TEMPLATE
+    html {
+      template = FILE
+      template.file = {$plugin.tx_wowcharacter_pi2.template.html}
+    }
+  }
+}

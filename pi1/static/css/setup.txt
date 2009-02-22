@@ -1,0 +1,3 @@
+plugin.tx_wowcharacter_pi1._CSS_DEFAULT_STYLE (
+
+)

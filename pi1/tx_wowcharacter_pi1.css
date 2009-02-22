@@ -1,0 +1,35 @@
+.tx-wowcharacter-pi1 {font-family: Trebuchet MS;font-size:12px;background:transparent url(###BACKGROUND###) no-repeat scroll 0%;color:#FFFFFF;font-weight:bold;height:440px;width:352px;}  
+.tx-wowcharacter-pi1 a {text-decoration:none;color:#fff;}
+.tx-wowcharacter-pi1 a:hover {text-decoration:underline;color:#fff;}
+.tx-wowcharacter-pi1 .content {float:left;height:424px;margin:14px 0pt 0pt 12px;padding:0pt 0pt 0pt 8px;}
+.tx-wowcharacter-pi1 .head {height:58px;margin-top:2px;padding-left:55px;}
+.tx-wowcharacter-pi1 .head .name {padding: 1px 0 0 0;}
+.tx-wowcharacter-pi1 .head .info {font-size:10px;}
+.tx-wowcharacter-pi1 .head .info .modified {font-style: italic;}
+.tx-wowcharacter-pi1 .slots {width:38px;height:365px;float:left;}
+.tx-wowcharacter-pi1 .slots .item {display:block;height:38px;margin-bottom:3px;width:38px;}
+.tx-wowcharacter-pi1 .stats {float:left;height:365px;width:247px;}
+.tx-wowcharacter-pi1 .stats td {font-size:10px;line-height:1em;font-weight:normal;}
+.tx-wowcharacter-pi1 .stats th {text-decoration: underline;padding:0 0 2px 0;}
+.tx-wowcharacter-pi1 .stats table {margin:2px 0 0 5px;width:90%;}
+.tx-wowcharacter-pi1 .stats table td.col1 {text-align:left;}
+.tx-wowcharacter-pi1 .stats table td.col2 {text-align:right;}
+.tx-wowcharacter-pi1 .stats table.resistances {width:21px;margin:2px 0 0 0;}
+.tx-wowcharacter-pi1 .stats table.resistances td {font-size:12px;height:23px;text-align:center;}
+.tx-wowcharacter-pi1 .stats .row1 {height:121px;width:247px;}
+.tx-wowcharacter-pi1 .stats .row1 .left {float:left;margin:4px 0pt 0pt 9px;width:206px;height:114px;padding:2px 0pt 0pt;}
+.tx-wowcharacter-pi1 .stats .row1 .right {float:right;margin:4px 8px 0pt 0pt;width:21px;height:116px;}
+.tx-wowcharacter-pi1 .stats .row1 .left .left {width:93px;margin:0;padding:0;}
+.tx-wowcharacter-pi1 .stats .row1 .left .right {width:113px;margin:0;padding:0;}
+.tx-wowcharacter-pi1 .stats .row1 .left table {}
+.tx-wowcharacter-pi1 .stats .row2 {height:91px;width:247px;}
+.tx-wowcharacter-pi1 .stats .row2 .left {float:left;margin:1px 0pt 0pt 9px;width:114px;height:89px;}
+.tx-wowcharacter-pi1 .stats .row2 .right {float:right;margin:1px 8px 0pt 0pt;width:114px;height:89px;}
+.tx-wowcharacter-pi1 .stats .row3 {height:91px;width:247px;}
+.tx-wowcharacter-pi1 .stats .row3 .left {float:left;margin:1px 0pt 0pt 9px;width:114px;height:89px;}
+.tx-wowcharacter-pi1 .stats .row3 .right {float:right;margin:1px 8px 0pt 0pt;width:114px;height:89px;}
+.tx-wowcharacter-pi1 .stats .bottom {height:53px;margin:8px 0pt 0pt 63px;width:184px;}
+.tx-wowcharacter-pi1 .stats .bottom .item {display:inline;}
+.tx-wowcharacter-pi1 form {margin:0;padding:78px 79px 0 67px;}
+.tx-wowcharacter-pi1 form fieldset {margin:0;padding:5px;height:106px;border:0;}
+.tx-wowcharacter-pi1-error {color:#f00;padding:18px 0pt 3px 75px;}

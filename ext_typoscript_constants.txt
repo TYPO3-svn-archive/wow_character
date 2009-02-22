@@ -1,0 +1,18 @@
+plugin.tx_wowcharacter_pi1 {
+  template {
+    #cat=plugin.tx_wowcharacter_pi1/file/a; type=string; label=CSS:path to css template.
+    css = EXT:wow_character/pi1/tx_wowcharacter_pi1.css
+    #cat=plugin.tx_wowcharacter_pi1/file/b; type=string; label=HTML:path to html template.
+    html = EXT:wow_character/pi1/tx_wowcharacter_pi1.html
+  }
+  #cat=plugin.tx_wowcharacter_pi1/other/a; type=int; label=itemDisplayPID: PID of page to display item.
+  itemDisplayPID =
+}
+plugin.tx_wowcharacter_pi2 {
+  template {
+    #cat=plugin.tx_wowcharacter_pi2/file/a; type=string; label=CSS:path to css template.
+    css = EXT:wow_character/pi2/tx_wowcharacter_pi2.css
+    #cat=plugin.tx_wowcharacter_pi2/file/b; type=string; label=HTML:path to html template.
+    html = EXT:wow_character/pi2/tx_wowcharacter_pi2.html
+  }
+}

@@ -1,0 +1,62 @@
+a:link.storyitemlink, a:visited.storyitemlink, a:active.storyitemlink { text-decoration: none; font-weight: bold; font-family:Arial, Helvetica, sans-serif;}
+a.raritylink0, a.raritylink0:link, a.raritylink0:visited, a.raritylink0:active { color: #999999; font-weight: bold;}/*grey*/
+a.raritylink1, a.raritylink1:link, a.raritylink1:visited, a.raritylink1:active { color: #000000; font-weight: bold;}/*white or black*/
+a.raritylink2, a.raritylink2:link, a.raritylink2:visited, a.raritylink2:active { color: #00FF00; font-weight: bold;}/*green*/
+a.raritylink3, a.raritylink3:link, a.raritylink3:visited, a.raritylink3:active { color: #0070DD; font-weight: bold;}/*blue*/
+a.raritylink4, a.raritylink4:link, a.raritylink4:visited, a.raritylink4:active { color: #A335EE; font-weight: bold;}/*purple*/
+a.raritylink5, a.raritylink5:link, a.raritylink5:visited, a.raritylink5:active { color: #FA9900; font-weight: bold;}/*orange*/
+a.raritylink6, a.raritylink6:link, a.raritylink6:visited, a.raritylink6:active { color: #e5cc80; font-weight: bold;}/*gold*/
+
+.item {font: 11px/16px Verdana, "Trebuchet MS", Arial, Helvetica, sans-serif; color: #fff; inline-table; position: relative; margin: 0; border: 0px; padding: 0;}
+.item td { margin: 0; border: 0; padding: 0;}
+.item div {clear:both;}
+.item .set {margin:1em 0;color: #ffd517;}
+.item .setboni {color:#787880;}
+.item ul {list-style: none;margin:0;padding:0 0 0 1em;}
+.item li {color:#787880;}
+.item .sockets {color:#787880;}
+.item .sockets img {height:1.2em;margin-right:5px;}
+.item a {color:inherit;text-decoration:none;}
+.item a:hover {text-decoration:underline;}
+.item .left {clear:none;float:left;text-align:left;}
+.item .right {clear:none;float:right;text-align:right;}
+.item img {height:32px;}
+.item td.tl, .item td.t, .item td.tr, .item td.bl, .item td.b, .item td.br { height: 7px; }
+.item td.tl, .item td.tr, .item td.bl, .item td.br, .item td.l, .item td.r	{ width: 7px;}
+.item td.tl { background: url('ttip-tl.png') no-repeat; }
+.item td.tr { background: url('ttip-tr.png') no-repeat; }
+.item td.t  { background: url('ttip-t.png') repeat-x; }
+.item td.l  { background: url('ttip-l.png') repeat-y; }
+.item td.r  { background: url('ttip-r.png') repeat-y; }
+.item td.bg { background: url('ttipbg.png') repeat; }
+.item td.bl { background: url('ttip-bl.png') no-repeat; }
+.item td.br { background: url('ttip-br.png') no-repeat; }
+.item td.b  { background: url('ttip-b.png') repeat-x; }
+.item .gold   { color: #e5cc80;}
+.item .quality5 { color: #ff8000;}
+.item .quality4 { color: #a335ee;}
+.item .quality3 { color: #0070dd;}
+.item .gray   { color: #c9c9c9;}
+.item .green  { color: #00ff00;}
+.item .yellow { color: #ffd517;}
+.item .red    { color: #d80000;}
+.item .white  { color: #ffffff;}
+.item .socketImg { width:14px; height:14px; vertical-align:-20%; margin:0 7px 0 0; padding:0;}
+.item .bonus { color:#00FF00; }
+.item .setNameYellow { color:#ffd517; font-size:11px; }
+.item .setIteellow { color:#f8ffa8; }
+.item .setItemGray { color:#787880; }
+.item .BlueGem { color:#666666; display:block; background:url('../images/Socket_Blue.png') no-repeat 3px 4px; padding-left:19px; }
+.item .MetaGem { color:#666666; display:block; background:url('../images/Socket_Meta.png') no-repeat 3px 4px; padding-left:19px; }
+.item .OrangeGem { color:#666666; display:block; background:url('../images/Socket_Orange.png') no-repeat 3px 4px; padding-left:19px; }
+.item .PurpleGem { color:#666666; display:block; background:url('../images/Socket_Purple.png') no-repeat 3px 4px; padding-left:19px; }
+.item .RedGem { color:#666666; display:block; background:url('../images/Socket_Red.png') no-repeat 3px 4px; padding-left:19px; }
+.item .YellowGem { color:#666666; display:block; background:url('../images/Socket_Yellow.png') no-repeat 3px 4px; padding-left:19px; }
+.item .name { font-size: 120%;font-weight: bold;}
+.item .special{color:#ffd800;}
+
+.Table { width:320px;}
+.setItemIndent {display:inline;}
+.setItemIndent span{margin-left:9px;}
+.socketImg{width:14px;height:14px;vertical-align:-20%;margin:0 77px 0 0;padding:0}
+.item-content   { font-weight:bold; color: white; }

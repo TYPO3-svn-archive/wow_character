@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin &quot;tx_wowcharacter_pi1&quot;</description>
+	</meta>
+	<data type="array">
+  
+    <languageKey index="default" type="array">
+    
+      <label index="female">female</label>
+      <label index="male">male</label>
+    
+      <label index="basestats">Base Stats</label>
+      <label index="strength">Strength</label>
+      <label index="agility">Agility</label>
+      <label index="stamina">Stamina</label>
+      <label index="intellect">Intellect</label>
+      <label index="spirit">Spirit</label>
+      <label index="melee">Melee</label>
+      <label index="ranged">Ranged</label>
+      <label index="spell">Spell</label>
+      <label index="defense">Defense</label>
+      <label index="damage">Damage</label>
+      <label index="speed">Speed</label>
+      <label index="power">Power</label>
+      <label index="bonusdamage">Bonus Damage</label>
+      <label index="bonushealing">Bonus Healing</label>
+      <label index="hitrating">Hit Rating</label>
+      <label index="critchance">Crit Chance</label>
+      <label index="penetration">Penetration</label>
+      <label index="manaregen">Mana Regen</label>
+      <label index="expertise">Expertise</label>
+      <label index="armor">Armor</label>
+      <label index="dodge">Dodge</label>
+      <label index="parry">Parry</label>
+      <label index="block">Block</label>
+      <label index="resilience">Resilience</label>
+      <label index="talentspecialization">Talents</label>
+      <label index="primaryprofessions">Professions</label>
+      <label index="health">Health</label>
+      <label index="mana">Mana</label>
+      <label index="rage">Rage</label>
+      <label index="energy">Energy</label>
+      
+      <label index="mining">Mining</label>
+      <label index="engineering">Engineering</label>
+      <label index="enchanting">Enchanting</label>
+      <label index="skinning">Skinning</label>
+      <label index="alchemy">Alchemy</label>
+      <label index="herbalism">Herbalism</label>
+      <label index="blacksmithing">Blacksmithing</label>
+      <label index="leatherworking">Leatherworking</label>
+      <label index="tailoring">Tailoring</label>
+      
+      <label index="race-01">Human</label>
+      <label index="race-02">Orc</label>
+      <label index="race-03">Dwarf</label>
+      <label index="race-04">Night Elf</label>
+      <label index="race-05">Undead</label>
+      <label index="race-06">Tauren</label>
+      <label index="race-07">Gnome</label>
+      <label index="race-08">Troll</label>
+      <label index="race-09">&lt;RACE09&gt;</label>
+      <label index="race-10">Blood Elf</label>
+      <label index="race-11">Draenei</label>
+      
+      <label index="class-01">Warrior</label>
+      <label index="class-02">Paladin</label>
+      <label index="class-03">Hunter</label>
+      <label index="class-04">Rogue</label>
+      <label index="class-05">Priest</label>
+      <label index="class-06">&lt;CLASS06&gt;</label>
+      <label index="class-07">Shaman</label>
+      <label index="class-08">Mage</label>
+      <label index="class-09">Warlock</label>
+      <label index="class-10">&lt;CLASS10&gt;</label>
+      <label index="class-11">Druid</label>
+      
+      <label index="talent-01-1">Arms</label>
+      <label index="talent-01-2">Fury</label>
+      <label index="talent-01-3">Protection</label>
+      <label index="talent-02-1">Holy</label>
+      <label index="talent-02-2">Protection</label>
+      <label index="talent-02-3">Retribution</label>
+      <label index="talent-03-1">Beast Mastery</label>
+      <label index="talent-03-2">Marksmanship</label>
+      <label index="talent-03-3">Survival</label>
+      <label index="talent-04-1">Assassination</label>
+      <label index="talent-04-2">Combat</label>
+      <label index="talent-04-3">Subtlety</label>
+      <label index="talent-05-1">Discipline</label>
+      <label index="talent-05-2">Holy</label>
+      <label index="talent-05-3">Shadow</label>
+      <label index="talent-06-1">&lt;TALENT061&gt;</label>
+      <label index="talent-06-2">&lt;TALENT062&gt;</label>
+      <label index="talent-06-3">&lt;TALENT063&gt;</label>
+      <label index="talent-07-1">Elemental</label>
+      <label index="talent-07-2">Enhancement</label>
+      <label index="talent-07-3">Restoration</label>
+      <label index="talent-08-1">Arcane</label>
+      <label index="talent-08-2">Fire</label>
+      <label index="talent-08-3">Frost</label>
+      <label index="talent-09-1">Gebrechen</label>
+      <label index="talent-09-2">Dämonologie</label>
+      <label index="talent-09-3">Zerstörung</label>
+      <label index="talent-10-1">&lt;TALENT101&gt;</label>
+      <label index="talent-10-2">&lt;TALENT102&gt;</label>
+      <label index="talent-10-3">&lt;TALENT103&gt;</label>
+      <label index="talent-11-1">Balance</label>
+      <label index="talent-11-2">Feral Combat</label>
+      <label index="talent-11-3">Restoration</label>
+      
+    </languageKey>
+  
+    <languageKey index="de" type="array">
+    
+      <label index="female">weiblich</label>
+      <label index="male">männlich</label>
+    
+      <label index="basestats">Basiswerte</label>
+      <label index="strength">Stärke</label>
+      <label index="agility">Beweglichkeit</label>
+      <label index="stamina">Ausdauer</label>
+      <label index="intellect">Intelligenz</label>
+      <label index="spirit">Willenskraft</label>
+      <label index="melee">Nahkampf</label>
+      <label index="ranged">Distanzwaffen</label>
+      <label index="spell">Zauber</label>
+      <label index="defense">Verteidigung</label>
+      <label index="damage">Damage</label>
+      <label index="speed">Speed</label>
+      <label index="power">Power</label>
+      <label index="bonusdamage">Schadensboni</label>
+      <label index="bonushealing">Heilungsboni</label>
+      <label index="hitrating">Trefferwertung</label>
+      <label index="critchance">Kritisch</label>
+      <label index="penetration">Durchschlag</label>
+      <label index="manaregen">Manaregeneration</label>
+      <label index="expertise">Expertise</label>
+      <label index="armor">Rüstung</label>
+      <label index="dodge">Dodge</label>
+      <label index="parry">Parry</label>
+      <label index="block">Block</label>
+      <label index="resilience">Resilience</label>
+      <label index="talentspecialization">Talente</label>
+      <label index="primaryprofessions">Hauptberufe</label>
+      <label index="health">Gesundheit</label>
+      <label index="mana">Mana</label>
+      <label index="rage">Rage</label>
+      <label index="energy">Energy</label>
+      
+      <label index="mining">Bergbau</label>
+      <label index="engineering">Ingenieurskunst</label>
+      <label index="enchanting">Enchanting</label>
+      <label index="skinning">Skinning</label>
+      <label index="alchemy">Alchemy</label>
+      <label index="herbalism">Herbalism</label>
+      <label index="blacksmithing">Blacksmithing</label>
+      <label index="leatherworking">Leatherworking</label>
+      <label index="tailoring">Tailoring</label>
+      
+      <label index="race-01">Mensch</label>
+      <label index="race-02">Orc</label>
+      <label index="race-03">Zwerg</label>
+      <label index="race-04">Night Elf</label>
+      <label index="race-05">Undead</label>
+      <label index="race-06">Tauren</label>
+      <label index="race-07">Gnome</label>
+      <label index="race-08">Troll</label>
+      <label index="race-09">RACE09</label>
+      <label index="race-10">Blood Elf</label>
+      <label index="race-11">Draenei</label>
+      
+      <label index="class-01">Krieger</label>
+      <label index="class-02">Paladin</label>
+      <label index="class-03">Jäger</label>
+      <label index="class-04">Rogue</label>
+      <label index="class-05">Priesterin</label>
+      <label index="class-06">CLASS06</label>
+      <label index="class-07">Shaman</label>
+      <label index="class-08">Mage</label>
+      <label index="class-09">Hexenmeister</label>
+      <label index="class-10">CLASS10</label>
+      <label index="class-11">Druid</label>
+      
+      <label index="talent-01-1">Arms</label>
+      <label index="talent-01-2">Fury</label>
+      <label index="talent-01-3">Protection</label>
+      <label index="talent-02-1">Holy</label>
+      <label index="talent-02-2">Protection</label>
+      <label index="talent-02-3">Retribution</label>
+      <label index="talent-03-1">Beast Mastery</label>
+      <label index="talent-03-2">Marksmanship</label>
+      <label index="talent-03-3">Survival</label>
+      <label index="talent-04-1">Assassination</label>
+      <label index="talent-04-2">Combat</label>
+      <label index="talent-04-3">Subtlety</label>
+      <label index="talent-05-1">Discipline</label>
+      <label index="talent-05-2">Holy</label>
+      <label index="talent-05-3">Shadow</label>
+      <label index="talent-06-1">&lt;TALENT061&gt;</label>
+      <label index="talent-06-2">&lt;TALENT062&gt;</label>
+      <label index="talent-06-3">&lt;TALENT063&gt;</label>
+      <label index="talent-07-1">Elemental</label>
+      <label index="talent-07-2">Enhancement</label>
+      <label index="talent-07-3">Restoration</label>
+      <label index="talent-08-1">Arcane</label>
+      <label index="talent-08-2">Fire</label>
+      <label index="talent-08-3">Frost</label>
+      <label index="talent-09-1">Affliction</label>
+      <label index="talent-09-2">Demonology</label>
+      <label index="talent-09-3">Destruction</label>
+      <label index="talent-10-1">&lt;TALENT101&gt;</label>
+      <label index="talent-10-2">&lt;TALENT102&gt;</label>
+      <label index="talent-10-3">&lt;TALENT103&gt;</label>
+      <label index="talent-11-1">Balance</label>
+      <label index="talent-11-2">Feral Combat</label>
+      <label index="talent-11-3">Restoration</label>
+      
+    </languageKey>
+    
+	</data>
+</T3locallang>
