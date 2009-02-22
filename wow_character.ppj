@@ -26,7 +26,7 @@ CvsHost=https://svn.typo3.org
 CvsRoot=TYPO3v4/Extensions/
 CvsModule=wow_character
 CvsUser=jobe
-CvsPassw=QQX6wgcxsijp7oihzcXUJbqjMPG2j8z98ruoSW4nxNXqiYinBuUUq+KuMP/eV7SFmgMQUZbvrF3SG4ipToekNQ==
+CvsPassw=DVBMFwMlFjzV0qTdSVHw2m420mqGfnOKtDaS+sZOsvr6VrKVBx7SCh6W8tpGThLarnZSKoq+sop6dpI6xs7yOg==
 CvsUseUtf8=1
 CvsCVSROOT=:pserver:jobe@https://svn.typo3.org:TYPO3v4/Extensions/
 IncPath_count=0
