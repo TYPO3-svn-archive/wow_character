@@ -1,20 +1,3 @@
-### dynamic css file base ###
-tmp.wow_character.css = PAGE
-tmp.wow_character.css {
-  typeNum = 1234
-  config{
-    additionalHeaders = Content-type: text/css
-    disableAllHeaderCode = 1
-  }
-  10 = TEMPLATE
-  10 {
-    template = FILE
-    template.file = fileadmin/template.css
-    marks {
-    }
-  }
-}
-
 ### create background image with avatar ###
 tmp.wow_character.background = IMG_RESOURCE
 tmp.wow_character.background {
@@ -28,7 +11,7 @@ tmp.wow_character.background {
     10.file {
       XY = 352,440
       format = png
-      backColor = #ffffff
+      backColor = #ffffbf
       10 = IMAGE
       10.offset = 10,8
       10.file.import.data = register:tx_wowcharacter_pi1_avatar
@@ -43,6 +26,14 @@ tmp.wow_character.background {
 ### configure plugin ###
 plugin.tx_wowcharacter_pi1 {
   template {
+    css = TEMPLATE
+    css {
+      template = FILE
+      template.file = {$plugin.tx_wowcharacter_pi1.template.css}
+      marks {
+        BACKGROUND < tmp.wow_character.background
+      }
+    }
     html = TEMPLATE
     html {
       template = FILE
@@ -65,23 +56,3 @@ plugin.tx_wowcharacter_pi2 {
     }
   }
 }
-
-### generate css files ###
-tx-wowcharacter-pi1-css < tmp.wow_character.css
-tx-wowcharacter-pi1-css {
-  typeNum = 618476
-  10.template.file = {$plugin.tx_wowcharacter_pi1.template.css}
-  10.marks {
-      BACKGROUND < tmp.wow_character.background
-  }
-}
-plugin.tx_wowcharacter_pi1._CSS_DEFAULT_STYLE = @import url("../index.php?type=618476");
-tx-wowcharacter-pi2-css < tmp.wow_character.css
-tx-wowcharacter-pi2-css {
-  typeNum = 618477
-  10.template.file = {$plugin.tx_wowcharacter_pi2.template.css}
-  10.marks {
-  }
-}
-plugin.tx_wowcharacter_pi2._CSS_DEFAULT_STYLE = @import url("../index.php?type=618477");
-

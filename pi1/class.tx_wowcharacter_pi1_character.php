@@ -1,5 +1,8 @@
 <?php
 
+DEFINE(TYPO3TEMP,PATH_site.'typo3temp/');
+DEFINE(CACHETIME,2592000);/* = 30 days */
+
 DEFINE(SLOT_HEAD,         01);
 DEFINE(SLOT_NECK,         02);
 DEFINE(SLOT_SHOULDERS,    03);
@@ -25,7 +28,12 @@ class tx_wowcharacter_pi1_character{
     public $xml = null;
     public $items = null;
     
-    public function tx_wowcharacter_pi1_character($realm,$char,$lang=null){
+    public function tx_wowcharacter_pi1_character($realm,$char,$lang='de-de'){
+      $this->load($realm,$char,$lang);
+    }
+
+    private function query($realm,$char,$lang='de-de'){
+      print('QUERY');
       if(empty($realm))throw new Exception('noName');// name is mandatory
       if(empty($char))throw new Exception('noRealm');// realm is mandatory
       if(empty($lang))$lang = array_shift(explode(',',$_SERVER["HTTP_ACCEPT_LANGUAGE"]));// default to browser language
@@ -44,8 +52,34 @@ class tx_wowcharacter_pi1_character{
       if($this->xml->characterInfo['errCode'])throw new Exception(sprintf('%s [%s,%s]',$this->xml->characterInfo['errCode'],$realm,$char));
       // parse items
       foreach( $this->xml->characterInfo->characterTab->items->item as $item )$this->items[intval($item['slot'])+1] = $item;
+      return( $this->xml && !$this->xml->errorCode['value'] && $this->xml->characterInfo['errCode'] );
     }
-
+    
+    private function load($realm,$char,$lang='de-de'){
+      print('LOAD');
+      $lang = implode('',explode('-',$lang));
+      $cache = sprintf(TYPO3TEMP.'wowcharacter-%s-%s-%s.xml',strtolower($realm),strtolower($char),strtolower($lang));
+      if( !file_exists($cache) || ( ( time() - filemtime($cache) ) > CACHETIME ) ){// if cache not exists or too old
+        if( $this->query($realm,$char,$lang) ){// if query successfull
+          $this->save($cache);// save data
+        }else{
+          if( file_exists($cache) ){// fallback to saved data if exists
+            $this->xml = simplexml_load_file($cache);
+          }else{
+            throw new Exception('noDataAvailable');
+          }
+        }
+      }else{
+        $this->xml = simplexml_load_file($cache);
+      }
+      return( !empty($this->xml) );
+    }
+    
+    private function save($filename){
+      print('SAVE');
+      $this->xml->asXML($filename);
+    }
+    
     public function getItem($pos,$tag){
       if(empty($this->items[$pos]))return null;
       return strval($this->items[$pos][$tag]);
@@ -56,4 +90,6 @@ class tx_wowcharacter_pi1_character{
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/wow_character/pi1/class.tx_wowcharacter_pi1_character.php']) {
   include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/wow_character/pi1/class.tx_wowcharacter_pi1_character.php']);
 }
+
+//print('<pre style="text-align:left;position:absolute;">');var_dump($GLOBALS['TSFE']->fe_user->user);print('</pre>');
 ?>
