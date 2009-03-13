@@ -23,7 +23,7 @@
 ***************************************************************/
 
 require_once(PATH_tslib.'class.tslib_pibase.php');
-require_once ( t3lib_extMgm::extPath('wow_character').'pi1/class.tx_wowcharacter_pi1_character.php' );
+require_once(t3lib_extMgm::extPath('wow_character').'inc/class.tx_wowcharacter_character.php');/*characters*/
 
 define(ARMORY_IMAGE,"http://eu.wowarmory.com/wow-icons/_images/43x43/%s.png");
 
@@ -91,7 +91,7 @@ class tx_wowcharacter_pi1 extends tslib_pibase {// -> http://typo3.org/fileadmin
     
     try{// load selected character
       
-      $this->character = new tx_wowcharacter_pi1_character($this->cRealm,$this->cName);
+      $this->character = new tx_wowcharacter_character($this->cRealm,$this->cName);
       $characterTab = $this->character->xml->characterInfo->characterTab;
       $characterInfo = $this->character->xml->characterInfo->character;
       

@@ -33,7 +33,6 @@ class tx_wowcharacter_pi1_character{
     }
 
     private function query($realm,$char,$lang='de-de'){
-      print('QUERY');
       if(empty($realm))throw new Exception('noName');// name is mandatory
       if(empty($char))throw new Exception('noRealm');// realm is mandatory
       if(empty($lang))$lang = array_shift(explode(',',$_SERVER["HTTP_ACCEPT_LANGUAGE"]));// default to browser language
@@ -56,7 +55,6 @@ class tx_wowcharacter_pi1_character{
     }
     
     private function load($realm,$char,$lang='de-de'){
-      print('LOAD');
       $lang = implode('',explode('-',$lang));
       $cache = sprintf(TYPO3TEMP.'wowcharacter-%s-%s-%s.xml',strtolower($realm),strtolower($char),strtolower($lang));
       if( !file_exists($cache) || ( ( time() - filemtime($cache) ) > CACHETIME ) ){// if cache not exists or too old
@@ -76,7 +74,6 @@ class tx_wowcharacter_pi1_character{
     }
     
     private function save($filename){
-      print('SAVE');
       $this->xml->asXML($filename);
     }
     
