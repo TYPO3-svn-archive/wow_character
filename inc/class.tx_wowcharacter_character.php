@@ -3,6 +3,22 @@
 DEFINE(TYPO3TEMP,PATH_site.'typo3temp/');
 DEFINE(CACHETIME,2592000);/* = 30 days */
 
+DEFINE(RACEID_OR,2);
+DEFINE(RACEID_UD,5);
+DEFINE(RACEID_TA,6);
+DEFINE(RACEID_BE,10);
+
+DEFINE(CLASSID_WR,1);
+DEFINE(CLASSID_PA,2);
+DEFINE(CLASSID_HU,3);
+DEFINE(CLASSID_RO,4);
+DEFINE(CLASSID_PR,5);
+DEFINE(CLASSID_DK,6);
+DEFINE(CLASSID_SH,7);
+DEFINE(CLASSID_MA,8);
+DEFINE(CLASSID_WL,9);
+DEFINE(CLASSID_DR,11);
+
 DEFINE(SLOT_HEAD,         01);
 DEFINE(SLOT_NECK,         02);
 DEFINE(SLOT_SHOULDERS,    03);
@@ -23,13 +39,14 @@ DEFINE(SLOT_SHIELD,       17);
 DEFINE(SLOT_WEAPON_RIGHT, 18);
 DEFINE(SLOT_TABARD,       19);
 
-class tx_wowcharacter_pi1_character{
+class tx_wowcharacter_character{
     
     public $xml = null;
     public $items = null;
     
-    public function tx_wowcharacter_pi1_character($realm,$char,$lang='de-de'){
+    public function tx_wowcharacter_character($realm,$char,$lang='de-de'){
       $this->load($realm,$char,$lang);
+      foreach( $this->xml->characterInfo->characterTab->items->item as $item )$this->items[intval($item['slot'])+1] = $item;// parse items
     }
 
     private function query($realm,$char,$lang='de-de'){
@@ -49,9 +66,7 @@ class tx_wowcharacter_pi1_character{
       if(empty($this->xml))throw new Exception(sprintf('%s [%s,%s]','armoryNoReply',$realm,$char));
       if($this->xml->errorCode['value'])throw new Exception(sprintf('%s [%s,%s]',$this->xml->errorCode['value'],$realm,$char));
       if($this->xml->characterInfo['errCode'])throw new Exception(sprintf('%s [%s,%s]',$this->xml->characterInfo['errCode'],$realm,$char));
-      // parse items
-      foreach( $this->xml->characterInfo->characterTab->items->item as $item )$this->items[intval($item['slot'])+1] = $item;
-      return( $this->xml && !$this->xml->errorCode['value'] && $this->xml->characterInfo['errCode'] );
+      return( !empty($this->xml) && empty($this->xml->errorCode['value']) && empty($this->xml->characterInfo['errCode']) );
     }
     
     private function load($realm,$char,$lang='de-de'){
@@ -84,8 +99,8 @@ class tx_wowcharacter_pi1_character{
 
 }
 
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/wow_character/pi1/class.tx_wowcharacter_pi1_character.php']) {
-  include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/wow_character/pi1/class.tx_wowcharacter_pi1_character.php']);
+if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/wow_character/pi1/class.tx_wowcharacter_character.php']) {
+  include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/wow_character/pi1/class.tx_wowcharacter_character.php']);
 }
 
 //print('<pre style="text-align:left;position:absolute;">');var_dump($GLOBALS['TSFE']->fe_user->user);print('</pre>');
