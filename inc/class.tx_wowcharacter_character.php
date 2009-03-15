@@ -46,7 +46,8 @@ class tx_wowcharacter_character{
     
     public function tx_wowcharacter_character($realm,$char,$lang='de-de'){
       $this->load($realm,$char,$lang);
-      foreach( $this->xml->characterInfo->characterTab->items->item as $item )$this->items[intval($item['slot'])+1] = $item;// parse items
+      if($this->xml->characterInfo->characterTab->items)
+        foreach( $this->xml->characterInfo->characterTab->items->item as $item )$this->items[intval($item['slot'])+1] = $item;// parse items
     }
 
     private function query($realm,$char,$lang='de-de'){
