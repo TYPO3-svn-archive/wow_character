@@ -98,8 +98,8 @@ class tx_wowcharacter_pi1 extends tslib_pibase {// -> http://typo3.org/fileadmin
       $secondBar = array( 'm' => 'mana', 'r' => 'rage', 'e' => 'energy' );
       
 		  $marker = array(
-        '###NAME###' => utf8_decode($characterInfo['name']),
-        '###REALM###' => utf8_decode($characterInfo['realm']),
+        '###NAME###' => $characterInfo['name'],
+        '###REALM###' => $characterInfo['realm'],
         '###ARMORY_URL###' => sprintf("http://armory.wow-europe.com/character-sheet.xml?r=%s&n=%s",$this->cRealm,$this->cName),
         '###AVATAR###'  => 'uploads/tx_wowcharacter/'.$this->cAvatar,
         '###LEVEL###'   => intval($characterInfo['level']),

@@ -1,7 +1,7 @@
 <?php
 
 DEFINE(TYPO3TEMP,PATH_site.'typo3temp/');
-DEFINE(CACHETIME,2592000);/* = 30 days */
+DEFINE(CACHETIME,86400);/* = 1 days */
 
 DEFINE(RACEID_OR,2);
 DEFINE(RACEID_UD,5);
@@ -60,8 +60,8 @@ class tx_wowcharacter_character{
         'user_agent' => sprintf('Mozilla/5.0 (Windows; U; Windows NT 5.1; %s; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6',$lang[0]),
         'header' => sprintf('Accept-language: %s-%s',$lang[0],$lang[1]),
       ))));
-      $realm = urlencode(utf8_encode($realm));
-      $char = urlencode(utf8_encode($char));
+      $realm = urlencode($realm);
+      $char = urlencode($char);
       $url = sprintf("http://armory.wow-europe.com/character-sheet.xml?r=%s&n=%s",$realm,$char);
       $this->xml = simplexml_load_file($url);
       if(empty($this->xml))throw new Exception(sprintf('%s [%s,%s]','armoryNoReply',$realm,$char));
