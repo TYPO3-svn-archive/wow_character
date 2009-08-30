@@ -1,0 +1,8 @@
+plugin.tx_wowcharacter_pi2 {
+  template = {$plugin.tx_wowcharacter_pi2.template}
+  template.marks {
+    dummy = TEXT
+    dummy.value = [DUMMY]
+  }
+  css = {$plugin.tx_wowcharacter_pi2.css}
+}

@@ -1,0 +1,16 @@
+.tx-wowcharacter-pi1 {color:#fff;}
+.tx-wowcharacter-pi1 td {vertical-align:top;}
+.tx-wowcharacter-pi1 .main {background:transparent url(res/background.png) no-repeat scroll top left;width:352px;height:440px;}
+.tx-wowcharacter-pi1 .main .head {height:72px;padding:14px 0 0 70px;}
+.tx-wowcharacter-pi1 .main .items td {width:41px;height:41px;border:0;padding:0;margin:0;}
+.tx-wowcharacter-pi1 .main .items td img {width:41px;height:41px;border:0;padding:0;margin:0;}
+.tx-wowcharacter-pi1 .main .items-left  {height:263px;width:41px;padding: 0 3px 39px 19px;}
+.tx-wowcharacter-pi1 .main .items-right {height:263px;width:41px;padding: 0 7px 39px  3px;}
+.tx-wowcharacter-pi1 .main .items-bottom {height:41px;width:123px;padding: 8px 57px 16px 56px;}
+.tx-wowcharacter-pi1 .main .stats td {font-size:10px;line-height:1em;font-weight:normal;}
+.tx-wowcharacter-pi1 .main .stats th {text-decoration: underline;padding:0 0 2px 0;}
+.tx-wowcharacter-pi1 .main .stats table {margin:2px 0 0 5px;width:90%;}
+.tx-wowcharacter-pi1 .main .stats table td.col1 {text-align:left;}
+.tx-wowcharacter-pi1 .main .stats table td.col2 {text-align:right;}
+
+.tx-wowcharacter-pi1 .main .stats td {border:1px solid #f00;}

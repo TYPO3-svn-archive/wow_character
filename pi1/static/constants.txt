@@ -1,0 +1,12 @@
+plugin.tx_wowcharacter_pi1 {
+
+    #cat=plugin.tx_wowcharacter_pi1/other/a; type=int; label=itemDisplayPID: PID of page to display item.
+  itemDisplayPID =
+
+    #cat=plugin.tx_wowcharacter_pi1/file/b; type=string; label=HTML:path to html template.
+  template = EXT:wow_character/pi1/tx_wowcharacter_pi1.html
+
+    #cat=plugin.tx_wowcharacter_pi1/file/c; type=string; label=HTML:path to css template.
+  css = EXT:wow_character/pi1/tx_wowcharacter_pi1.css
+  
+}

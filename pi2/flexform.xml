@@ -6,14 +6,14 @@
   <sDEF>
    <ROOT>
     <TCEforms>
-     <sheetTitle>LLL:EXT:wow_character/locallang_db.xml:tt_content.pi_flexform.sheet_general</sheetTitle>
+     <sheetTitle>LLL:EXT:wow_character/locallang.xml:tt_content.pi_flexform.sheet_general</sheetTitle>
     </TCEforms>
     <type>array</type>
      <el>
       <chars_folder>
        <TCEforms>
         <exclude>1</exclude>
-        <label>LLL:EXT:wow_character/locallang_db.xml:tt_content.pi_flexform.chars_folder</label>
+        <label>LLL:EXT:wow_character/locallang.xml:tt_content.pi_flexform.chars_folder</label>
         <config>
          <type>group</type>
          <internal_type>db</internal_type>
@@ -28,7 +28,7 @@
       <display_page>
        <TCEforms>
         <exclude>1</exclude>
-        <label>LLL:EXT:wow_character/locallang_db.xml:tt_content.pi_flexform.display_page</label>
+        <label>LLL:EXT:wow_character/locallang.xml:tt_content.pi_flexform.display_page</label>
         <config>
          <type>group</type>
          <internal_type>db</internal_type>

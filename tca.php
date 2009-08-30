@@ -4,7 +4,7 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 $TCA["tx_wowcharacter_characters"] = array (
 	"ctrl" => $TCA["tx_wowcharacter_characters"]["ctrl"],
 	"interface" => array (
-		"showRecordFieldList" => "hidden,fe_group,realm,name,avatar"
+		"showRecordFieldList" => "hidden,fe_group,fe_user,realm,name,avatar"
 	),
 	"feInterface" => $TCA["tx_wowcharacter_characters"]["feInterface"],
 	"columns" => array (
@@ -18,21 +18,31 @@ $TCA["tx_wowcharacter_characters"] = array (
 		),
 		'fe_group' => array (		
 			'exclude' => 1,
-			'label'   => 'LLL:EXT:lang/locallang_general.xml:LGL.fe_group',
+			'label'   => 'LLL:EXT:wow_character/locallang.xml:tx_wowcharacter_characters.fe_group',
 			'config'  => array (
 				'type'  => 'select',
 				'items' => array (
 					array('', 0),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.hide_at_login', -1),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.any_login', -2),
-					array('LLL:EXT:lang/locallang_general.xml:LGL.usergroups', '--div--')
 				),
-				'foreign_table' => 'fe_groups'
+				'foreign_table' => 'fe_groups',
+				"eval" => "required"
+			)
+		),
+		'fe_user' => array (		
+			'exclude' => 1,
+			'label'   => 'LLL:EXT:wow_character/locallang.xml:tx_wowcharacter_characters.fe_user',
+			'config'  => array (
+				'type'  => 'select',
+				'items' => array (
+					array('', 0),
+				),
+				'foreign_table' => 'fe_users',
+				"eval" => "required"
 			)
 		),
 		"realm" => Array (		
 			"exclude" => 1,		
-			"label" => "LLL:EXT:wow_character/locallang_db.xml:tx_wowcharacter_characters.realm",		
+			"label" => "LLL:EXT:wow_character/locallang.xml:tx_wowcharacter_characters.realm",		
 			"config" => Array (
 				"type" => "input",	
 				"size" => "30",	
@@ -41,7 +51,7 @@ $TCA["tx_wowcharacter_characters"] = array (
 		),
 		"name" => Array (		
 			"exclude" => 1,		
-			"label" => "LLL:EXT:wow_character/locallang_db.xml:tx_wowcharacter_characters.name",		
+			"label" => "LLL:EXT:wow_character/locallang.xml:tx_wowcharacter_characters.name",		
 			"config" => Array (
 				"type" => "input",	
 				"size" => "30",	
@@ -50,7 +60,7 @@ $TCA["tx_wowcharacter_characters"] = array (
 		),
 		"avatar" => Array (		
 			"exclude" => 1,		
-			"label" => "LLL:EXT:wow_character/locallang_db.xml:tx_wowcharacter_characters.avatar",		
+			"label" => "LLL:EXT:wow_character/locallang.xml:tx_wowcharacter_characters.avatar",		
 			"config" => Array (
 				"type" => "group",
 				"internal_type" => "file",
@@ -65,10 +75,16 @@ $TCA["tx_wowcharacter_characters"] = array (
 		),
 	),
 	"types" => array (
-		"0" => array("showitem" => "hidden;;1;;1-1-1, realm, name, avatar")
+		"0" => array("showitem" => "hidden;;1;;1-1-1,realm,name,fe_user,fe_group,avatar")
 	),
 	"palettes" => array (
-		"1" => array("showitem" => "fe_group")
+		"1" => array("showitem" => "")
 	)
 );
+
+if( (TYPO3_MODE=="BE") && (t3lib_div::int_from_ver(TYPO3_version) >= 4001000) ){
+  require_once(t3lib_extMgm::extPath('wow_character').'inc/class.tx_wowcharacter_itemsProcFunc.php');
+  $TCA["tx_wowcharacter_characters"]["columns"]["fe_group"]["config"]["itemsProcFunc"] = "tx_wowcharacter_itemsProcFunc->getGuildList";// edit view
+}
+
 ?>

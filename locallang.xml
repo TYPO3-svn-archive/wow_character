@@ -10,12 +10,35 @@
 			<label index="pi1_plus_wiz_description">Displays a WOW Character.</label>
 			<label index="pi2_title">WOW - Character List</label>
       <label index="pi2_plus_wiz_description">Displays a list of WOW Characters.</label>
+      <label index="tx_wowcharacter_characters">WOW Character</label>
+      <label index="tx_wowcharacter_characters.realm">Realm</label>
+      <label index="tx_wowcharacter_characters.name">Name</label>
+      <label index="tx_wowcharacter_characters.avatar">Avatar</label>
+      <label index="tx_wowcharacter_characters.fe_user">Player</label>
+      <label index="tx_wowcharacter_characters.fe_group">Guild</label>
+      <label index="tt_content.list_type_pi1">WOW - Character Display</label>
+      <label index="tt_content.list_type_pi2">WOW - Character List</label>
+      <label index="tt_content.pi_flexform.sheet_general">General Settings</label>
+      <label index="tt_content.pi_flexform.display_char">Display this character:</label>
+      <label index="tt_content.pi_flexform.chars_folder">Display characters from:</label>
+      <label index="tt_content.pi_flexform.display_page">Display characters on page:</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="pi1_title">WOW - Charakter Anzeige</label>
 			<label index="pi1_plus_wiz_description">Zeigt einen WOW Charakter an.</label>
 			<label index="pi2_title">WOW - Character List</label>
       <label index="pi2_plus_wiz_description">Zeigt eine Liste von WOW Charakteren an.</label>
+      <label index="tx_wowcharacter_characters">WOW Charakter</label>
+      <label index="tx_wowcharacter_characters.realm">Realm</label>
+      <label index="tx_wowcharacter_characters.name">Name</label>
+      <label index="tx_wowcharacter_characters.avatar">Avatar</label>
+      <label index="fe_users.tx_wowcharacter_wowchars">WOW Charakter</label>
+      <label index="tt_content.list_type_pi1">WOW - Charakter Anzeige</label>
+      <label index="tt_content.list_type_pi2">WOW - Charakter Liste</label>
+      <label index="tt_content.pi_flexform.sheet_general">Allgemein</label>
+      <label index="tt_content.pi_flexform.display_char">Zeige diesen Charakter:</label>
+      <label index="tt_content.pi_flexform.chars_folder">Zeige Charaktere aus:</label>
+      <label index="tt_content.pi_flexform.display_page">Zeige Charaktere auf Seite:</label>
 		</languageKey>
 	</data>
 </T3locallang>

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<title>tx_wowcharacter_pi1</title>
+</head>
+<style>
+  body {background:#aaa;}
+  .tx-wowcharacter-pi1 {}
+  .tx-wowcharacter-pi1 td {vertical-align:top;}
+  .tx-wowcharacter-pi1 .main {background:transparent url(background.png) no-repeat scroll top left;width:352px;height:440px;}
+  .tx-wowcharacter-pi1 .main .head {height:59px;padding:14px 0 0 70px;}
+  .tx-wowcharacter-pi1 .main .items td {width:41px;height:41px;border:0;padding:0;margin:0;}
+  .tx-wowcharacter-pi1 .main .items-left  {height:263px;width:41px;padding: 0 3px 39px 19px;}
+  .tx-wowcharacter-pi1 .main .items-right {height:263px;width:41px;padding: 0 7px 39px  3px;}
+  .tx-wowcharacter-pi1 .main .items-bottom {height:41px;width:123px;padding: 8px 57px 16px 56px;}
+  /*DEBUG*/
+  .tx-wowcharacter-pi1 .items td {background:url(http://www.jobesoft.de/fileadmin/gfx/debugR.png);}
+</style>
+<body>
+
+<fieldset class="tx-wowcharacter-pi1"><legend>CHARACTER</legend>
+<!-- ###CHARACTER### begin -->
+  <table cellpadding="0" cellspacing="0" border="0" class="main">
+    <tr><td class="head" colspan="3">###NAME### (###REALM###)</td></tr>
+    <tr>
+      <td rowspan="2" valign="top" class="items-left">
+        <table cellpadding="0" cellspacing="0" border="0" class="items">
+					<!--###ITEMS_LEFT###-->
+						<!--###ITEM###--><tr>
+						<td><a href="index.php?id=7&tx_wowitem_pi1[id]=###ID###"><img src="http://eu.wowarmory.com/wow-icons/_images/43x43/###ICON###.png"/></a></td>
+						</tr><!--###ITEM###-->
+					<!--###ITEMS_LEFT###-->
+        </table>
+      </td><!--items-left-->
+      <td height="302" width="232" class="stats">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tr><td colspan="2">1</td></tr>
+					<tr><td class="stats-1">
+            <table cellspacing="0" cellpadding="0" border="0" class="basestats">
+              <tr><th class="col1" colspan="2">###LLL_BASESTATS###:</th></tr>
+              <tr><td class="col1">###LLL_STRENGTH###</td><td class="col2">###STRENGTH###</td></tr>
+              <tr><td class="col1">###LLL_AGILITY###</td><td class="col2">###AGILITY###</td></tr>
+              <tr><td class="col1">###LLL_STAMINA###</td><td class="col2">###STAMINA###</td></tr>
+              <tr><td class="col1">###LLL_INTELLECT###</td><td class="col2">###INTELLECT###</td></tr>
+              <tr><td class="col1">###LLL_SPIRIT###</td><td class="col2">###SPIRIT###</td></tr>
+              <tr><td class="col1">###LLL_ARMOR###</td><td class="col2">###ARMOR###</td></tr>
+              <tr><td class="col1">###LLL_HEALTH###</td><td class="col2">###HEALTH###</td></tr>
+							<!--###MANA###-->
+              <tr><td class="col1">###LLL_MANA###</td><td class="col2">###EFFECTIVE###</td></tr>
+							<!--###MANA###-->
+            </table>
+					</td><td class="stats-2">
+						<!--###MELEE###-->
+						<table cellspacing="0" cellpadding="0" border="0" class="melee">
+							<tr><th class="col1" colspan="2">###LLL_MELEE###:</th></tr>
+							<tr><td class="col1">###LLL_DAMAGE###</td><td class="col2">###MAINHANDDAMAGE.MIN###-###MAINHANDDAMAGE.MAX###</td></tr>
+							<tr><td class="col1">###LLL_SPEED###</td><td class="col2">###MAINHANDSPEED###</td></tr>
+							<tr><td class="col1">###LLL_POWER###</td><td class="col2">###POWER###</td></tr>
+							<tr><td class="col1">###LLL_HITRATING###</td><td class="col2">###HITRATING###</td></tr>
+							<tr><td class="col1">###LLL_CRITCHANCE###</td><td class="col2">###CRITCHANCE###</td></tr>
+							<tr><td class="col1">###LLL_EXPERTISE###</td><td class="col2">###EXPERTISE###</td></tr>
+						</table>
+						<!--###MELEE###-->
+					</td></tr>
+					<tr><td class="stats-3">
+					</td><td class="stats-4">
+					</td></tr>
+				</table>
+			</td><!--stats-body-->
+      <td rowspan="2" valign="top" class="items-right">
+        <table cellpadding="0" cellspacing="0" border="0" class="items">
+					<!--###ITEMS_RIGHT###-->
+						<!--###ITEM###--><tr>
+						<td><a href="index.php?id=7&tx_wowitem_pi1[id]=###ID###"><img src="http://eu.wowarmory.com/wow-icons/_images/43x43/###ICON###.png"/></a></td>
+						</tr><!--###ITEM###-->
+					<!--###ITEMS_RIGHT###-->
+        </table>
+      </td><!--items-right-->
+    </tr>
+    <tr>
+      <td height="063" class="items-bottom">
+        <table cellpadding="0" cellspacing="0" border="0" class="items"><tr>
+					<!--###ITEMS_BOTTOM###-->
+						<!--###ITEM###-->
+						<td><a href="index.php?id=7&tx_wowitem_pi1[id]=###ID###"><img src="http://eu.wowarmory.com/wow-icons/_images/43x43/###ICON###.png"/></a></td>
+						<!--###ITEM###-->
+					<!--###ITEMS_BOTTOM###-->
+        </tr></table>
+      </td><!--items-bottom-->
+    </tr>
+  </table>
+<!-- ###CHARACTER### end -->
+</fieldset><br/>
+
+<fieldset class="tx-wowcharacter-pi1"><legend>ERROR</legend>
+<!-- ###ERROR### begin -->
+<pre class="tx-wowcharacter-pi1-error">
+<strong>###MESSAGE###</strong>
+###TRACE###
+</pre>
+<!-- ###ERROR### end -->
+</fieldset>
+
+</body>
+</html>
