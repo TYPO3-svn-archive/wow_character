@@ -1,8 +1,35 @@
-plugin.tx_wowcharacter_pi2 {
-  template = {$plugin.tx_wowcharacter_pi2.template}
-  template.marks {
-    dummy = TEXT
-    dummy.value = [DUMMY]
+page.includeCSS.tx_wowcharacter_pi2 = {$plugin.tx_wowcharacter_pi2.css}
+plugin.tx_wowcharacter_pi2{
+  template = FILE
+  template.file = {$plugin.tx_wowcharacter_pi2.template}
+  workOnSubpart = MAIN
+  marks {
+    URL = TEXT
+    URL.typolink.parameter.data = page:uid
+    URL.typolink.returnLast = url
   }
-  css = {$plugin.tx_wowcharacter_pi2.css}
+  locallang = {$plugin.tx_wowcharacter_pi2.locallang}
+  subparts {
+    CHARACTER = CONTENT
+    CHARACTER.table = tx_wowcharacter_characters
+    CHARACTER.select.pidInList = 3
+    CHARACTER.select.orderBy = name
+    CHARACTER.renderObj = TEMPLATE
+    CHARACTER.renderObj.template = TEXT
+    CHARACTER.renderObj.template.data = TSFE:register|SUBPART_CHARACTER
+    CHARACTER.renderObj.marks =< plugin.tx_wowcharacter_pi2.marks
+    CHARACTER.renderObj.marks{
+      UID = TEXT
+      UID.field = uid
+      REALM = TEXT
+      REALM.field = realm
+      NAME = TEXT
+      NAME.field = name
+      NAME.typolink.parameter.data = page:uid
+      NAME.typolink.additionalParams = &tx_wowcharacter_pi1[id]={field:uid}
+      NAME.typolink.additionalParams.insertData = 1
+      AVATAR = TEXT
+      AVATAR.field = avatar
+    }
+  }
 }

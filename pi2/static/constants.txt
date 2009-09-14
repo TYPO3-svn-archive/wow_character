@@ -1,9 +1,12 @@
 plugin.tx_wowcharacter_pi2 {
 
-    #cat=plugin.tx_wowcharacter_pi2/file/b; type=string; label=HTML:path to html template.
+    #cat=plugin.tx_wowcharacter_pi2/file[html]/b; type=string; label=HTML:path to html template.
   template = EXT:wow_character/pi2/tx_wowcharacter_pi2.html
 
-    #cat=plugin.tx_wowcharacter_pi2/file/c; type=string; label=HTML:path to css template.
+    #cat=plugin.tx_wowcharacter_pi2/file[css]/c; type=string; label=CSS:path to css template.
   css = EXT:wow_character/pi2/tx_wowcharacter_pi2.css
+  
+    #cat=plugin.tx_wowcharacter_pi2/file[xml]/c; type=string; label=LABELS:path to labels definition.
+  locallang = EXT:wow_character/pi2/locallang.xml
   
 }

@@ -48,23 +48,66 @@ class tx_wowcharacter_pi2 extends mmlib_pibase {
 	 * @return	The content that is displayed on the website
 	 */
 	function main($content,$conf){try{
-    
 		parent::main($content,$conf);
-		
-		$marker = array(
-			'URL' => $this->link(5),
-			'CHARACTER' => mmlib_db::query('tx_wowcharacter_characters')
-		);
-		
-		return $this->display($this->template,$marker,'MAIN');
+		// merge ts-defined locallang files
+		if(file_exists( $llf = $this->file($this->conf['locallang']) ))
+			$this->LOCAL_LANG = array_rmerge($this->LOCAL_LANG,t3lib_div::readLLfile($llf,$this->LLkey));
+		// merge locallang.xml with ts-locallang:
+		$conf['locallang.'] = array_rmerge($this->LLTS(),$conf['locallang.']);
+		// copy ts-locallang to marks:
+		foreach($conf['locallang.'] as $key => $value)$tmp['LLL_'.$key] = $value;
+		$conf['marks.'] = array_rmerge($tmp,$conf['marks.']);
+		//print('<pre>');print_ts($conf);die('</pre>');/*DEBUG*/
+		// generate output:
+    return $this->display($conf);
 			
 	}catch (Exception $e){
 		return $this->display($this->template,array('MESSAGE'=>$e->getMessage(),'TRACE'=>$e->getTraceAsString()),'ERROR');
 	}}
 	
+  public function display($conf){
+		if(empty($conf['template']))throw new Exception('template missing');
+    return $this->pi_wrapInBaseClass($this->cObj->TEMPLATE($conf));
+  }
+	
+	private function LLTS(){
+		foreach($this->LOCAL_LANG as $LLKey => $locallang ){
+			foreach($locallang as $key => $value){
+				$key = strtoupper($key);
+				$ll[$key] = 'TEXT';
+				if(!strcasecmp($LLKey,'default')){
+					$ll[$key.'.']['value'] = $value;
+				}else{
+					$ll[$key.'.']['lang.'][$LLKey] = $value;
+				}
+			}
+		}
+		return $ll;
+	}
+	
 }
 
+/**
+ * recursive array merge
+ */
+function array_rmerge($a,$b){
+	if(!is_array($b))return $a;
+	if(!is_array($a))return $b;
+	foreach(array_keys(array_merge($a,$b)) as $k)
+		if( is_array($a[$k]) && is_array($b[$k]) )$b[$k] = array_rmerge($a[$k],$b[$k]);
+	return array_merge($a,$b);
+}
 
+/**
+ * print as typoscript
+ */
+function print_ts($ts,$prefix=''){
+	foreach($ts as $key => $value)if(is_array($value)){
+		print_ts($value,$prefix.$key);
+	}else{
+		print($prefix.$key." = ".$value."\n");
+	}
+}
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/wow_character/pi2/class.tx_wowcharacter_pi2.php'])	{
 	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/wow_character/pi2/class.tx_wowcharacter_pi2.php']);
