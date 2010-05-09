@@ -2,6 +2,10 @@
 <!-- Komodo Project File - DO NOT EDIT -->
 <project id="ae3fda92-0e82-46ba-8416-a6ee709b7150" kpf_version="4" name="wow_character.kpf">
 <preference-set idref="ae3fda92-0e82-46ba-8416-a6ee709b7150">
+  <string id="import_exclude_matches">*.*~;*.bak;*.tmp;CVS;.#*;*.pyo;*.pyc;.svn;_svn;*%*;tmp*.html;.DS_Store;Thumbs.db</string>
+  <string id="import_include_matches"></string>
   <boolean id="import_live">1</boolean>
+  <boolean id="import_recursive">1</boolean>
+  <string id="import_type">useFolders</string>
 </preference-set>
 </project>
